@@ -1,2 +1,2 @@
 # gidda_vuln
-Vulnerability scanner 
+This is a vulnerability scanner for your linux 
