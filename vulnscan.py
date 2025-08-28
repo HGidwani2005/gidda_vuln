@@ -66,7 +66,9 @@ out = run_cmd("dnf check-update --refresh 2>/dev/null || true")
 # dnf outputs a table of packages; parse simple
 pkgs = []
 for line in out.splitlines():
-if line and not line.startswith("Last metadata") and not line.startswith("\"):
+if line and not line.startswith("Last metadata") and not line.startswith("\\"):
+
+
 parts = line.split()
 if len(parts) >= 1 and "/" in parts[0]:
 run_checks(args)
